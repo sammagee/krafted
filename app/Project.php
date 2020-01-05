@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Tags\HasTags;
 
 class Project extends Model
 {
+    use HasTags;
+
     protected $dates = [
         'completed_at',
     ];
@@ -17,10 +20,5 @@ class Project extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }
-
-    public function skills()
-    {
-        return $this->belongsToMany(Skill::class);
     }
 }

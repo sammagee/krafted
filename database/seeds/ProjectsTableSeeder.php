@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Spatie\Tags\Tag;
 
 class ProjectsTableSeeder extends Seeder
 {
@@ -11,14 +12,14 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        $skills = factory(App\Skill::class, 10)->create();
         factory(App\Category::class, 10)->create()->each(function ($category) {
             $category->projects()->save(factory(App\Project::class)->make());
         });
 
+        $tags = factory(Tag::class, 10)->create();
         $projects = App\Project::all();
-        $projects->each(function ($project) use ($skills) {
-            $project->skills()->attach($skills->random(rand(1, 5))->pluck('id')->toArray());
+        $projects->each(function ($project) use ($tags) {
+            $project->attachTags($tags->random(rand(1, 3))->pluck('name')->toArray());
         });
     }
 }

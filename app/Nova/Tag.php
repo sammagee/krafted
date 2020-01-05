@@ -2,19 +2,19 @@
 
 namespace App\Nova;
 
-use Benjaminhirsch\NovaSlugField\Slug;
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Spatie\Tags\Tag as TagModel;
 
-class Skill extends Resource
+class Tag extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Skill::class;
+    public static $model = TagModel::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -29,7 +29,7 @@ class Skill extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'slug',
+        'name',
     ];
 
     /**
@@ -41,14 +41,7 @@ class Skill extends Resource
     public function fields(Request $request)
     {
         return [
-            TextWithSlug::make('Name')
-                ->slug('slug')
-                ->sortable()
-                ->required(),
-
-            Slug::make('Slug')->hideFromIndex()->required(),
-
-            BelongsToMany::make('Projects'),
+            Text::make('Name')->sortable()->required(),
         ];
     }
 

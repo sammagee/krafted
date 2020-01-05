@@ -7,11 +7,10 @@ use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Illuminate\Http\Request;
 use Inspheric\Fields\Url;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Trix;
-use NovaAttachMany\AttachMany;
+use Spatie\TagsField\Tags;
 
 class Project extends Resource
 {
@@ -56,17 +55,15 @@ class Project extends Resource
 
             BelongsTo::make('Category')->searchable(),
 
-            AttachMany::make('Skills')->required(),
+            Tags::make('Tags')->withLinkToTagResource(),
 
             Trix::make('Description')->sortable()->required(),
 
-            Image::make('Image', 'image_url')->required(),
+            Image::make('Image', 'image_url')->disk('public')->required(),
 
             Url::make('Link')->rules('url')->alwaysClickable()->nameLabel(),
 
             Date::make('Completed At'),
-
-            BelongsToMany::make('Skills'),
         ];
     }
 
