@@ -46,14 +46,14 @@
                     </div>
 
                     <footer class="flex justify-end p-1">
-                        <button type="button" class="px-4 py-2 rounded font-semibold text-primary-900 hover:opacity-75 focus:opacity-75 focus:shadow-outline focus:outline-none"
+                        <button type="button" class="px-4 py-2 rounded font-semibold text-primary-900 hover:opacity-75 focus:opacity-75 focus:shadow-outline focus:outline-none transition-all ease-in-out transition-slow"
                                 @click="close">
                             Cancel
                         </button>
 
                         <button
-                            class="ml-1 flex items-center px-4 py-2 font-semibold bg-primary-900 text-primary-500 rounded hover:shadow hover:opacity-75 focus:opacity-75 focus:shadow-outline focus:outline-none">
-                            <svg class="mr-2 h-3 w-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            class="ml-1 flex items-center px-4 py-2 font-semibold bg-primary-900 text-primary-500 rounded hover:shadow hover:opacity-75 focus:opacity-75 focus:shadow-outline focus:outline-none transition-all ease-in-out transition-slow">
+                            <svg class="mr-2 h-3 w-3 transition-all ease-in-out transition-slow" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
                                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
                                 <path d="M0 0h24v24H0z" fill="none"></path>
