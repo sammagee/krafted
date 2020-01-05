@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Inspheric\Fields\Url;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Trix;
 use NovaAttachMany\AttachMany;
@@ -62,6 +63,8 @@ class Project extends Resource
             Image::make('Image', 'image_url')->required(),
 
             Url::make('Link')->rules('url')->alwaysClickable()->nameLabel(),
+
+            Date::make('Completed At'),
 
             BelongsToMany::make('Skills'),
         ];
