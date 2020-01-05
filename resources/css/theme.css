@@ -1,0 +1,13 @@
+@each $theme in blue, green, indigo, orange, pink, purple, red, teal, yellow {
+    .theme-$(theme) {
+        --color-primary-100: theme('colors.$(theme).100');
+        --color-primary-200: theme('colors.$(theme).200');
+        --color-primary-300: theme('colors.$(theme).300');
+        --color-primary-400: theme('colors.$(theme).400');
+        --color-primary-500: theme('colors.$(theme).500');
+        --color-primary-600: theme('colors.$(theme).600');
+        --color-primary-700: theme('colors.$(theme).700');
+        --color-primary-800: theme('colors.$(theme).800');
+        --color-primary-900: theme('colors.$(theme).900');
+    }
+}

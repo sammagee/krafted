@@ -1,0 +1,63 @@
+@tailwind base;
+
+@tailwind components;
+
+*:focus {
+    @apply outline-none;
+}
+
+#nprogress {
+    @apply pointer-events-none;
+}
+
+#nprogress .bar {
+    @apply bg-primary-500 fixed z-50 top-0 left-0 w-full h-1;
+}
+
+#nprogress .peg {
+    @apply absolute block right-0 w-24 h-full shadow opacity-100;
+    transform: rotate(3deg) translate(0, -0.25rem);
+}
+
+#nprogress .spinner {
+    @apply block fixed z-50 top-0 right-0 mt-4 mr-4;
+}
+
+#nprogress .spinner-icon {
+    @apply w-4 h-4 rounded-full border-2 border-transparent;
+    border-top-color: theme('colors.primary.500');
+    border-left-color: theme('colors.primary.500');
+    animation: nprogress-spinner 0.5s linear infinite;
+}
+
+.nprogress-custom-parent {
+    @apply overflow-hidden relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    @apply absolute;
+}
+
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+::selection {
+    @apply bg-primary-900 text-primary-300;
+}
+
+input, textarea, [contenteditable=true] {
+    caret-color: theme('colors.primary.700');
+}
+
+@tailwind utilities;
+
+@variants hover, focus, active {
+    .opacity-90 {
+        opacity: 0.9;
+    }
+}
+
+@import 'theme.css';
