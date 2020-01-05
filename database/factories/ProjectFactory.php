@@ -14,6 +14,7 @@ $factory->define(Project::class, function (Faker $faker) {
         'slug' => Str::slug($title),
         'description' => $faker->paragraph,
         'image_url' => $faker->image('storage/app/public', 640, 480, null, false),
+        'link' => $faker->url,
         'completed_at' => $faker->dateTimeBetween('now', '+1 year'),
     ];
 });

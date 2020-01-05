@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
             $table->string('slug')->unique();
             $table->text('description');
             $table->string('image_url');
+            $table->string('link');
             $table->dateTime('completed_at');
             $table->timestamps();
         });

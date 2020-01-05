@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe7e78d2f6244e37f164f957312d0092",
+    "content-hash": "250689916f82a14bdb15b3be53d9524e",
     "packages": [
         {
             "name": "benjaminhirsch/nova-slug-field",
@@ -1014,6 +1014,50 @@
                 "laravel"
             ],
             "time": "2019-09-09T10:48:43+00:00"
+        },
+        {
+            "name": "inspheric/nova-url-field",
+            "version": "v1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inspheric/nova-url-field.git",
+                "reference": "9876d08acf42a976a2b910d42c7507dad6216ed2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inspheric/nova-url-field/zipball/9876d08acf42a976a2b910d42c7507dad6216ed2",
+                "reference": "9876d08acf42a976a2b910d42c7507dad6216ed2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Inspheric\\Fields\\UrlFieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Inspheric\\Fields\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova url field.",
+            "keywords": [
+                "field",
+                "href",
+                "laravel",
+                "nova",
+                "url"
+            ],
+            "time": "2019-10-05T17:36:10+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",

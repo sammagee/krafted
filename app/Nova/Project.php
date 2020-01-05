@@ -5,6 +5,7 @@ namespace App\Nova;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Illuminate\Http\Request;
+use Inspheric\Fields\Url;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Image;
@@ -59,6 +60,8 @@ class Project extends Resource
             Trix::make('Description')->sortable()->required(),
 
             Image::make('Image', 'image_url')->required(),
+
+            Url::make('Link')->rules('url')->alwaysClickable()->nameLabel(),
 
             BelongsToMany::make('Skills'),
         ];
