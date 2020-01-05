@@ -4,7 +4,7 @@
             <h1 class="font-hairline text-6xl text-center text-primary-800">Work</h1>
         </div>
 
-        <div class="flex flex-wrap -mx-4 mb-16">
+        <div class="flex flex-wrap justify-center -mx-4 mb-16">
             <div class="w-full lg:w-1/2 xl:w-1/3 p-4" v-for="project in projects">
                 <a :href="project.slug" class="group flex flex-col relative hover:z-50 transition-all ease-in-out transition-slow">
                     <div class="relative overflow-hidden rounded-lg shadow-md group-hover:shadow-xl transition-all ease-in-out transition-slow z-10">
