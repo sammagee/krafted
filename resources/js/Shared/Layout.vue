@@ -15,8 +15,8 @@
                 <div class="flex-1"></div>
 
                 <nav class="flex items-center">
-                   <inertia-link class="ml-3 font-semibold text-primary-800 border-t-2 border-b-2 border-transparent hover:opacity-75 hover:border-primary-300 focus:opacity-75 focus:border-primary-300"
-                        :class="{ 'border-primary-300': $current('work') }"
+                   <inertia-link class="ml-3 font-semibold text-primary-800 border-t-2 border-b-2 border-transparent hover:opacity-75 hover:border-primary-600 focus:opacity-75 focus:border-primary-600"
+                        :class="{ 'border-primary-600': $current('work') }"
                         :href="$route('work')"
                         style="border-top-color: transparent !important;">Work</inertia-link>
 <!--                    <inertia-link class="ml-3 hover:text-black" :href="$route('work')">Blog</inertia-link>-->

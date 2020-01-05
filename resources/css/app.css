@@ -54,10 +54,7 @@ input, textarea, [contenteditable=true] {
 
 @tailwind utilities;
 
-@variants hover, focus, active {
-    .opacity-90 {
-        opacity: 0.9;
-    }
-}
-
 @import 'theme.css';
+@import 'utilities/filter.css';
+@import 'utilities/opacity.css';
+@import 'utilities/transition.css';

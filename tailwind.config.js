@@ -20,7 +20,10 @@ module.exports = {
     }
   },
   variants: {
-    borderWidth: ['responsive', 'hover', 'focus']
+    borderWidth: ['responsive', 'hover', 'focus'],
+    height: ['responsive', 'group-hover'],
+    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
+    zIndex: ['responsive', 'hover'],
   },
   plugins: []
 };
