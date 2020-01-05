@@ -21,6 +21,7 @@ module.exports = {
   },
   variants: {
     borderWidth: ['responsive', 'hover', 'focus'],
+    boxShadow: ['responsive', 'hover', 'focus', 'group-hover'],
     height: ['responsive', 'group-hover'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     zIndex: ['responsive', 'hover'],
