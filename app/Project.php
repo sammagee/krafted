@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $dates = [
+        'completed_at',
+    ];
+
     protected $fillable = [
         'title', 'slug', 'description', 'image_url', 'link', 'completed_at',
     ];
