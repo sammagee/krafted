@@ -7,7 +7,7 @@
         <div class="flex flex-wrap justify-center -mx-4 mb-16">
             <div class="w-full lg:w-1/2 xl:w-1/3 p-4" v-for="project in projects">
                 <!-- TODO: Change to project.slug once a "show" page is created for projects -->
-                <a :href="project.link" target="_blank" rel="noopener" class="group flex flex-col relative hover:z-50 transition-all ease-in-out transition-slow">
+                <a :href="project.link" target="_blank" rel="noopener" class="group flex flex-col relative hover:z-50 transition-all ease-in-out transition-slow" :title="project.description">
                     <div class="relative overflow-hidden rounded-lg shadow-md group-hover:shadow-xl transition-all ease-in-out transition-slow z-10">
                         <img class="rounded-lg filter-grayscale filter-primary group-hover:filter-none transition-all ease-in-out transition-slow" :src="'/storage/' + project.image_url" :alt="project.title" />
                         <div class="absolute inset-0 bg-primary-500 opacity-50 group-hover:opacity-25 transition-opacity ease-in-out transition-slow"></div>
